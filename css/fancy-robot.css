@@ -29,6 +29,18 @@
   position: relative;
   top: 50px;
   left: 30%;
+  animation: left-eye 2s ease infinite;
+}
+
+/* animate left eye */
+@keyframes left-eye {
+  0% {
+    transform: translate(-50px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
 }
 
 .robot-eye-right {
@@ -69,6 +81,24 @@
   box-sizing: content-box;
 }
 
+/* Scale bigger on hover right eye animation */
+.robot-eye-right:hover {
+  animation: big-eye 5s;
+}
+
+@keyframes big-eye {
+  from {
+    transform: scale(1);
+    background: green;
+    border-color: #fffc00;
+  }
+  to {
+    transform: scale(10);
+    background: gray;
+    border-color: pink;
+  }
+}
+
 .robot-ear-left {
   position: absolute;
   top: 30px;
@@ -77,6 +107,17 @@
   height: 100px;
   background: red;
   border-radius: 100px / 50px;
+  animation: rotate-left-ear reverse 3s infinite;
+}
+
+/* animate ear left */
+@keyframes rotate-left-ear {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .robot-ear-right {
@@ -87,6 +128,18 @@
   height: 200px;
   background: linear-gradient(#fffc00, #fff);
   border-radius: 50px / 100px;
+  animation: disappearing 5s ease-in-out alternate infinite;
+}
+
+/* animate right ear */
+
+@keyframes disappearing {
+  from {
+    right: 23%;
+  }
+  to {
+    right: -8%;
+  }
 }
 
 .robot-nose {
@@ -98,6 +151,23 @@
   position: relative;
   top: 15%;
   left: 40%;
+  animation: nose-color 3s ease-in infinite 2s;
+}
+
+/* animation changing nose color */
+@keyframes nose-color {
+  0% {
+    border-bottom-color: rgb(255, 0, 0);
+  }
+  25% {
+    border-bottom-color: hsl(137, 70%, 42%);
+  }
+  50% {
+    border-bottom-color: rgb(40, 10, 82);
+  }
+  100% {
+    border-bottom-color: rgb(0, 0, 0);
+  }
 }
 
 .robot-teeth {
@@ -121,7 +191,9 @@
   background: white;
   width: 40px;
   height: 30px;
+  animation: teeth 3s ease-in-out 2s infinite;
 }
+
 .t-two {
   transform: skew(10deg);
   top: 0;
@@ -129,7 +201,9 @@
   background: blue;
   width: 50px;
   height: 20px;
+  animation: teeth 3s ease-in-out 2s infinite;
 }
+
 .t-three {
   transform: skew(16deg);
   top: 0;
@@ -137,6 +211,7 @@
   background: bisque;
   width: 70px;
   height: 50px;
+  animation: teeth 3s ease-in-out 2s infinite;
 }
 
 .t-four {
@@ -146,6 +221,7 @@
   background: pink;
   width: 10px;
   height: 20px;
+  animation: teeth 3s ease-in-out 2s infinite;
 }
 
 .t-five {
@@ -155,6 +231,7 @@
   background: green;
   width: 40px;
   height: 30px;
+  animation: teeth 3s ease-in-out 2s infinite;
 }
 
 .t-six {
@@ -164,6 +241,7 @@
   background: orange;
   width: 20px;
   height: 40px;
+  animation: teeth 3s ease-in-out 2s infinite;
 }
 
 .t-seven {
@@ -174,6 +252,7 @@
   border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
   bottom: 0;
   left: 2px;
+  animation: teeth 3s ease-in-out 2s infinite;
 }
 
 .t-eight {
@@ -184,6 +263,7 @@
   border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
   bottom: 0;
   left: 15%;
+  animation: teeth 3s ease-in-out 2s infinite;
 }
 
 .t-nine {
@@ -194,6 +274,7 @@
   border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
   bottom: 0;
   left: 25%;
+  animation: teeth 3s ease-in-out 2s infinite;
 }
 
 .t-ten {
@@ -204,6 +285,7 @@
   border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
   bottom: 0;
   left: 35%;
+  animation: teeth 3s ease-in-out 2s infinite;
 }
 
 .t-eleven {
@@ -214,6 +296,7 @@
   border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
   bottom: 0;
   left: 55%;
+  animation: teeth 3s ease-in-out 2s infinite;
 }
 
 .t-twelve {
@@ -224,6 +307,17 @@
   border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
   bottom: 0;
   left: 82%;
+  animation: teeth 3s ease-in-out 2s infinite;
+}
+
+/* animate teeth */
+@keyframes teeth {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .robot-hair-style {
@@ -245,6 +339,7 @@
   position: absolute;
   top: -90px;
   left: 30%;
+  animation: skew 2s ease infinite;
 }
 
 .robot-hair-two {
@@ -257,6 +352,7 @@
   position: absolute;
   top: -90px;
   left: 38%;
+  animation: skew 2s ease infinite;
 }
 
 .robot-hair-four {
@@ -269,6 +365,7 @@
   position: absolute;
   top: -90px;
   left: 46%;
+  animation: skew 2s ease infinite;
 }
 
 .robot-hair-one:last-of-type {
@@ -281,6 +378,7 @@
   position: absolute;
   top: -90px;
   left: 55%;
+  animation: skew 2s ease infinite;
 }
 
 .robot-hair-three {
@@ -293,4 +391,15 @@
   position: absolute;
   top: -90px;
   left: 65%;
+  animation: skew 2s ease infinite;
+}
+
+/* animate hair */
+@keyframes skew {
+  0% {
+    transform: skew(0);
+  }
+  100% {
+    transform: skew(20deg);
+  }
 }
